@@ -1,10 +1,13 @@
-import { useContext } from "react";
 import "./App.css";
+import Header from "./components/Header/Header";
 
 function App() {
-  const { data, setdata } = useContext([]);
 
-  return <></>;
+  return (
+  <>
+    <Header />
+  </>
+  )
 }
 
 export default App;
