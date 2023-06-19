@@ -1,4 +1,5 @@
 import "./DetailSite.css";
+import DetailsCard from "../../components/DetailsCard/DetailsCard";
 
 const DetailSite = () => {
   return (
