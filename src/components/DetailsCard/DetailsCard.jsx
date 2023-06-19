@@ -1,9 +1,11 @@
+
 import "./DetailsCard.css";
 import { useEffect, useState } from "react";
 
 import BtnType from "../BtnType/BtnType";
 
 const DetailsCard = () => {
+
   const [pokemonData, setPokemonData] = useState();
 
   useEffect(() => {
@@ -12,8 +14,6 @@ const DetailsCard = () => {
       .then((data) => setPokemonData(data))
       .catch((error) => console.log("Fehlermeldung: ", error));
   }, []);
-
-  console.log(pokemonData);
 
   return (
     <>

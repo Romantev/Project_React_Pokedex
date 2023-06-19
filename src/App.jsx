@@ -1,3 +1,4 @@
+
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -13,7 +14,6 @@ function App() {
           <Route path="./detail-site" element={<DetailSite />} />
         </Routes>
       </BrowserRouter>
-      <DetailSite />
     </>
   );
 }
