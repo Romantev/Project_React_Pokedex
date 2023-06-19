@@ -1,0 +1,29 @@
+:root {
+	--main-color: #e5e5e5;
+	--second-color: #ffcb05;
+	--third-color: #ffe1c6;
+	--text-blue: #2c72b8;
+	--text-grey: #909090;
+	--black: #000;
+	--white: #fff;
+	--gap: 20px;
+}
+@font-face {
+	font-family: roboto;
+	src: local("roboto"), url(".fonts/RobotoSlab-Regular.ttf") format("truetype");
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "roboto", Arial, Helvetica, sans-serif;
+}
+
+img {
+	max-width: 100%;
+}

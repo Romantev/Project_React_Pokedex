@@ -7,8 +7,14 @@ import logo from "../.././Header/pokemon.png"
 
 const NavMenu = ({open, setOpen}) => {
     const [types, setTypes] = useState([])
+    const [allTypes, setAlltypes] = useState()
      
-    const testArray = ["Bug", "Dark", "Dragon", "Electro", "Fairy", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Normal", "Plant", "Poison", "Pychic", "Rock", "Steel", "Water"]
+    useEffect(()=>{
+        fetch('https://pokeapi.co/api/v2/type')
+        .then((res)=> res.json())
+        .then((data)=> setAlltypes(data.results))
+        .catch((err)=> console.log("Fehler", Error))
+    }, [])
 
     return ( 
     <>
@@ -19,7 +25,7 @@ const NavMenu = ({open, setOpen}) => {
             </div>
             <h1>Type</h1>
              <div>
-            {testArray.map((item, i) => <CheckBox text={item}  setTypes={setTypes} key={i}/>)}
+            {allTypes?.map((item, i) => <CheckBox text={item.name}  setTypes={setTypes} key={i}/>)}
             </div> 
             <SearchBar /> 
         </div>
