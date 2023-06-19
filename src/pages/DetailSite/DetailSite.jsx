@@ -1,9 +1,12 @@
 import "./DetailSite.css";
+import DetailsCard from "../../components/DetailsCard/DetailsCard";
 
 const DetailSite = () => {
   return (
     <>
-      <main className="Details-site"></main>
+      <main className="details-site">
+        <DetailsCard />
+      </main>
     </>
   );
 };
