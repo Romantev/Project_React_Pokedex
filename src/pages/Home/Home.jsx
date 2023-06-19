@@ -9,7 +9,7 @@ const Home = () => {
   
 
   useEffect(() => {
-    let ignore = false;
+    let ignore = false
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=1200`)
     .then((response) => response.json())
     .then((data) => {
