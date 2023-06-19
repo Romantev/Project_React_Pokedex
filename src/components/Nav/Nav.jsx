@@ -4,7 +4,6 @@ import NavMenu from "./NavMenu/NavMenu";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
-  console.log(open);
   return (
   <>
     <nav>

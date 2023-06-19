@@ -10,7 +10,7 @@
 }
 @font-face {
 	font-family: roboto;
-	src: local("roboto"), url(".fonts/RobotoSlab-Regular.ttf") format("truetype");
+	src: local("roboto"), url("./fonts/RobotoSlab-Regular.ttf") format("truetype");
 }
 
 * {
