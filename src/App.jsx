@@ -1,13 +1,20 @@
 import "./App.css";
-import Header from "./components/Header/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home/Home";
+import DetailSite from "./pages/detailsite/Detailsite";
 
 function App() {
-
   return (
-  <>
-    <Header />
-  </>
-  )
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="./" element={<Home />} />
+          <Route path="./detail-site" element={<DetailSite />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;
