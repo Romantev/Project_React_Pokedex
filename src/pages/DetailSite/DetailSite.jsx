@@ -1,7 +1,11 @@
 import "./DetailSite.css";
 
 const DetailSite = () => {
-  return <></>;
+  return (
+    <>
+      <main className="Details-site"></main>
+    </>
+  );
 };
 
 export default DetailSite;
