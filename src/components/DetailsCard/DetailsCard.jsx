@@ -1,7 +1,11 @@
+
 import "./DetailsCard.css";
 
 const DetailsCard = () => {
-  return <></>;
+  
+  return <>
+
+  </>;
 };
 
 export default DetailsCard;

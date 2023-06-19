@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import Home from './pages/Home/Home'
 import "./App.css";
 
 function App() {
-  const { data, setdata } = useContext([]);
+  
 
-  return <></>;
+  return <>
+    <Home/>
+    <h1>hello</h1>
+  </>;
 }
 
 export default App;
