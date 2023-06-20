@@ -6,8 +6,8 @@ import './fonts/RobotoSlab-Regular.ttf'
 import './fonts/Roboto-Black.ttf'
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
