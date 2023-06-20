@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 
 const Header = (props) => {
   const [icon, setIcon] = useState(false);
-   const location = useLocation();
+  const location = useLocation();
   const isDetailPage = location.pathname !== "/";
 
   return (
@@ -20,7 +20,7 @@ const Header = (props) => {
           <img src={logo} alt="Pokemon-Logo" />
         </div>
         <div className="nav-wrapper">
-          {isDetailPage ? <BtnBack /> : <Nav/>} 
+          {isDetailPage ? <BtnBack /> : <Nav setFilterType={props.setFilterType}/>} 
           <SearchBar data={props.data} search={props.search} />
           <BtnDarkMode />
         </div>

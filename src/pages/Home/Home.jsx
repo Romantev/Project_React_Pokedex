@@ -5,7 +5,8 @@ import PokemonCard from "../../components/PokemonCard/PokemonCard";
 const Home = () => {
   const [workData, setWorkData] = useState([]);
   const [searchPokemon, setSearchPokemon] = useState();
-
+ const [filterType, setFilterType] = useState([]);
+ 
   useEffect(() => {
     let ignore = false;
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=1200`)
@@ -35,15 +36,30 @@ const Home = () => {
       : null;
   };
 
+  const filterMe = (item) => {
+    const var1 =filterType.some((filter) => item.types[0].type.name.includes(filter))
+
+    if (item.types.length === 2) {
+      const var2 = filterType.some((filter) => item.types[1].type.name.includes(filter))
+
+      return var1&&var2&&filterType.length===2?item:null
+    }
+    return var1&&filterType.length===1?item:null
+  }
+/*     return filterType.some((filter) => item.types.some((type) => type.type.name.includes(filter)?true:false)?true:false)?item:null}; */
+  
+
+  const sortMe = (a,b) => a.id - b.id;
+
+
   return (
     <>
       <section>
-        <Header data={workData} search={setSearchPokemon} />
+        <Header data={workData} setFilterType={setFilterType} search={setSearchPokemon} />
         <article className="wrapperHome">
           {workData
-            ?.sort((a, b) => a.id - b.id)
-            .filter(searchPokemon ? searchForPokemon : () => workData)
-
+            ?.sort(sortMe)
+            .filter(searchPokemon ? searchForPokemon : () => workData).filter(filterType.length !== 0?filterMe:() => workData)
             .map((onePokemon, index) => {
               return (
                 <PokemonCard
