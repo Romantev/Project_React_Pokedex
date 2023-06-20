@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './CheckBox.css'
 
-const CheckBox = ({text, setTypes}) => {
+const CheckBox = ({text, setTypes, backgroundColor}) => {
     const [check, setCheck] = useState(false)
 
     useEffect(()=>{
@@ -10,7 +10,7 @@ const CheckBox = ({text, setTypes}) => {
 
     return ( 
         <>
-            <div onClick={() => {setCheck((prev) => !prev)}} className={check?"checkBox checked":"checkBox"}>
+            <div onClick={() => {setCheck((prev) => !prev)}} className={check?"checkBox checked":"checkBox"} style={backgroundColor?`background-color: ${backgroundColor}`:null}>
                 {text}
             </div>
         </>

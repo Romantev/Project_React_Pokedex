@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import SearchBar from "../../SearchBar/SearchBar";
 import CheckBox from "../../CheckBox/CheckBox"
 import logo from "../.././Header/pokemon.png"
+import close from "./close.svg"
+import "./NavMenu.css"
 
 
 
@@ -18,17 +20,17 @@ const NavMenu = ({open, setOpen}) => {
 
     return ( 
     <>
-        <div>
-            <div>
+        <section className="navMenu">
+            <div className="imgBox">
                 <img src={logo} alt="Pokemon-Logo" />
-                <button onClick={() => setOpen(false)}>X</button>
+                <img onClick={() => setOpen(false)} src={close} alt="close" />
             </div>
             <h1>Type</h1>
-             <div>
+             <div className="checkBoxBox">
             {allTypes?.map((item, i) => <CheckBox text={item.name}  setTypes={setTypes} key={i}/>)}
             </div> 
             <SearchBar /> 
-        </div>
+        </section>
     </>
     
     );
