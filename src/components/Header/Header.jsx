@@ -3,10 +3,15 @@ import "./Header.css";
 import logo from "./pokemon.png";
 import Nav from "../Nav/Nav";
 import SearchBar from "../SearchBar/SearchBar";
-import BtnDarkMode from "../BtnDarkMode/BtnDarkMode";
+import BtnSearch from "../BtnSearch/BtnSearch";
+import BtnDarkMode from "../BtnDarkMode/BtnDarkMode"
+import BtnBack from "../BtnBack/BtnBack";
+import { useLocation } from "react-router-dom";
 
 const Header = (props) => {
   const [icon, setIcon] = useState(false);
+   const location = useLocation();
+  const isDetailPage = location.pathname !== "/";
 
   return (
     <>
@@ -15,7 +20,7 @@ const Header = (props) => {
           <img src={logo} alt="Pokemon-Logo" />
         </div>
         <div className="nav-wrapper">
-          <Nav />
+          {isDetailPage ? <BtnBack /> : <Nav/>} 
           <SearchBar data={props.data} search={props.search} />
           <BtnDarkMode />
         </div>

@@ -9,7 +9,6 @@ const PokemonCard = ({ name, image, idPokemon }) => {
           <div className="pokemonCardHome">
             <img src={image} alt={name} />
             <section className="info-Pokemon">
-              <p>{name}</p>
               <p>
                 {idPokemon < 10 ? "#00" : idPokemon < 100 ? "#0" : "#"}
                 {idPokemon}
