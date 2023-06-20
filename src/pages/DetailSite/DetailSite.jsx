@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import DetailsCard from "../../components/DetailsCard/DetailsCard";
 import Header from "../../components/Header/Header";
 
+
 const DetailSite = () => {
   const [pokemonData, setPokemonData] = useState();
   const params = useParams();
@@ -20,6 +21,7 @@ const DetailSite = () => {
   return (
     <>
       <Header />
+      
       <main className="details-site">
         <DetailsCard item={pokemonData} />
       </main>
