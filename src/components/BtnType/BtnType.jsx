@@ -1,10 +1,14 @@
-import { NavLink } from "react-router-dom";
 import "./BtnType.css";
+import { NavLink } from "react-router-dom";
 
-const BtnType = ({text, className, color}) => {
-  return <>
-    <NavLink className={className} to={`/:${text}`} style={color?`color: ${color};`:null}>{text}</NavLink>
-  </>;
+const BtnType = ({ type, className }) => {
+  return (
+    <>
+      <NavLink className={className} to={`/:${type}`}>
+        {type}
+      </NavLink>
+    </>
+  );
 };
 
 export default BtnType;
