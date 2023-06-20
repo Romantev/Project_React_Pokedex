@@ -1,17 +1,18 @@
 import "./App.css";
-import BtnSearch from "./components/BtnSearch/BtnSearch";
-import React, { useState } from "react";
-import { DarkModeContext } from "./context/Context";
-import Header from "./components/Header/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home/Home";
+import DetailSite from "./pages/detailsite/Detailsite";
 
 function App() {
-  const [darkMode, SetdarkMode] = useState(false);
   return (
     <>
-      <DarkModeContext.Provider value={{ darkMode, SetdarkMode }}>
-        <Header />
-        <BtnSearch />
-      </DarkModeContext.Provider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/detail-site" element={<DetailSite />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

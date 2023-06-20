@@ -1,0 +1,10 @@
+.checkBox {
+	border: 1px solid black;
+	padding: 9px 0;
+	width: 120px;
+	height: 35px;
+	text-align: center;
+}
+.checked {
+	text-decoration: line-through;
+}
