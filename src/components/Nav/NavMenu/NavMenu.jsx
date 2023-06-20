@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import SearchBar from "../../SearchBar/SearchBar";
 import CheckBox from "../../CheckBox/CheckBox"
 import logo from "../.././Header/pokemon.png"
 import close from "./close.svg"
 import "./NavMenu.css"
+import BtnSearch from "../../BtnSearch/BtnSearch";
 
 
 
-const NavMenu = ({open, setOpen}) => {
-    const [types, setTypes] = useState([])
+const NavMenu = ({open, setFilterType, setOpen}) => {
     const [allTypes, setAlltypes] = useState()
+    const [clicked, setClicked] = useState()
      
     useEffect(()=>{
         fetch('https://pokeapi.co/api/v2/type')
@@ -27,9 +27,9 @@ const NavMenu = ({open, setOpen}) => {
             </div>
             <h1>Type</h1>
              <div className="checkBoxBox">
-            {allTypes?.map((item, i) => <CheckBox text={item.name}  setTypes={setTypes} key={i}/>)}
+            {allTypes?.map((item, i) => <CheckBox text={item.name}  setFilterType={setFilterType} key={i}/>)}
             </div> 
-            <SearchBar /> 
+            <BtnSearch /> 
         </section>
     </>
     

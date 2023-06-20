@@ -6,7 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import BtnSearch from "../BtnSearch/BtnSearch";
 import BtnDarkMode from "../BtnDarkMode/BtnDarkMode"
 
-const Header = () => {
+const Header = ({setFilterType}) => {
 
   const [icon, setIcon] = useState(false);
 
@@ -16,7 +16,7 @@ const Header = () => {
       <div className="img-wrapper">
         <img src={logo} alt="Pokemon-Logo"/>
       </div>
-      <Nav />
+      <Nav setFilterType={setFilterType}/>
       <SearchBar />
       {/* <BtnDarkMode /> */}
     </header>  

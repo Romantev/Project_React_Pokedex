@@ -4,8 +4,8 @@ import PokemonCard from "../../components/PokemonCard/PokemonCard";
 
 const Home = () => {
  const [workData, setWorkData] = useState([]);
-  
-
+ const [filterType, setFilterType] = useState([]);
+ 
   useEffect(() => {
     let ignore = false
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=1200`)
@@ -26,12 +26,18 @@ const Home = () => {
     };
   }, [])
 
+  const filterMe = (item) => {
+    return item.types.includes(filterType)?item:null
+  }
+
+  const sortMe = (a,b) => a.id - b.id;
+
   return (
     <>
       <section>
-        <Header/> 
+        <Header setFilterType={setFilterType} /> 
         <article className='wrapperHome'>
-          {workData?.sort((a, b) => a.id - b.id).map((onePokemon, index) => {
+          {workData?.sort(sortMe).filter(filterType.length !== 0?filterMe:() => workData).map((onePokemon, index) => {
             return (
               <PokemonCard key={index} image={onePokemon.sprites.other.home.front_default?onePokemon.sprites.other.home.front_default:onePokemon.sprites.front_default} idPokemon={onePokemon.id} name={onePokemon.name} />
             );
