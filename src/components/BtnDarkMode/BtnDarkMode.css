@@ -1,0 +1,10 @@
+.btn-darkmodeicon {
+  border: none;
+}
+
+.darkmode-icon {
+  transform: scale(1.5);
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+}
