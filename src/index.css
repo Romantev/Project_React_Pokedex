@@ -12,6 +12,10 @@
 	font-family: roboto;
 	src: local("roboto"), url("./fonts/RobotoSlab-Regular.ttf") format("truetype");
 }
+@font-face {
+	font-family: roboto900;
+	src: local("roboto"), url("./fonts/Roboto-Black.ttf") format("truetype");
+}
 
 * {
 	padding: 0;
