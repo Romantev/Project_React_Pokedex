@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react';
-import Header from '../../components/Header/Header'
-import PokemonCard from '../../components/PokemonCard/PokemonCard';
-
+import { useEffect, useState } from "react";
+import Header from "../../components/Header/Header";
+import PokemonCard from "../../components/PokemonCard/PokemonCard";
 
 const Home = () => {
-  
-  const [workData, setWorkData] = useState([]);
+ const [workData, setWorkData] = useState([]);
   
 
   useEffect(() => {
