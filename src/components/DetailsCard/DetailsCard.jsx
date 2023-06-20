@@ -30,6 +30,13 @@ const DetailsCard = (props) => {
               <BtnType item={elm} key={index} />;
             })}
           </div>
+          <div className="attributes">
+            <button className="btn-violett">POISON</button>
+            <button className="btn-green">GRASS</button>
+          </div>
+          <div className="skills">
+            <h4>ATTACK AND MOVEMENTS</h4>
+          </div>
         </main>
       ) : (
         "Seite muss geladen werden"
