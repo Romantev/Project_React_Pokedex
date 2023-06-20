@@ -24,7 +24,7 @@ const DetailsCard = (props) => {
           </div>
           <div className="details-card-types">
             {props.item.types.map((elm, index) => {
-              <BtnType item={elm} key={index} />;
+              <BtnType text={elm} key={index} />;
             })}
           </div>
         </main>
