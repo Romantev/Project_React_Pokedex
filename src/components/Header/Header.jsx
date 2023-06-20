@@ -3,7 +3,7 @@ import "./Header.css";
 import logo from "./pokemon.png";
 import Nav from "../Nav/Nav";
 import SearchBar from "../SearchBar/SearchBar";
-// import BtnDarkMode from "../BtnDarkMode/BtnDarkMode";
+import BtnDarkMode from "../BtnDarkMode/BtnDarkMode";
 
 const Header = (props) => {
   const [icon, setIcon] = useState(false);
@@ -17,7 +17,7 @@ const Header = (props) => {
         <div className="nav-wrapper">
           <Nav />
           <SearchBar data={props.data} search={props.search} />
-          {/* <BtnDarkMode /> */}
+          <BtnDarkMode />
         </div>
       </header>
     </>
