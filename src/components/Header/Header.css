@@ -1,0 +1,9 @@
+.header {
+  padding: 1rem;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
