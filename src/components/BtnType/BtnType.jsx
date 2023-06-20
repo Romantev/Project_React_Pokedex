@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const BtnType = ({ type, className }) => {
   return (
     <>
-      <NavLink className={className} to={`/:${type}`}>
+      <NavLink className={className} to={`/${type}`}>
         {type}
       </NavLink>
     </>

@@ -5,7 +5,7 @@ const PokemonCard = ({ name, image, idPokemon }) => {
   return (
     <>
       <section className="wrapperHome">
-        <Link to={`./detail-site/${idPokemon}`} className="link">
+        <Link to={`/detail-site/${idPokemon}`} className="link">
           <div className="pokemonCardHome">
             <img src={image} alt={name} />
             <section className="info-Pokemon">

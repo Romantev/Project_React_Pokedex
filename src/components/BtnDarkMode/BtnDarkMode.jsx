@@ -11,8 +11,6 @@ const BtnDarkMode = () => {
     setDarkMode((prev) => !prev);
   };
 
-  console.log(darkMode);
-
   return (
     <>
       <button className="btn-darkmodeicon" onClick={changeTheme}>

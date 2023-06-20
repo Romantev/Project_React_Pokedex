@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import PokemonCard from "../../components/PokemonCard/PokemonCard";
+import { useParams } from "react-router-dom";
 
 const Home = () => {
   const [workData, setWorkData] = useState([]);
   const [searchPokemon, setSearchPokemon] = useState();
  const [filterType, setFilterType] = useState([]);
+ const param = useParams();
+
  
-  useEffect(() => {
-    let ignore = false;
+ 
+ useEffect(() => {
+   let ignore = false;
+   param.type?setFilterType([param.type]):null
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=1200`)
       .then((response) => response.json())
       .then((data) => {
