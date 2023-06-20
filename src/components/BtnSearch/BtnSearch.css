@@ -1,15 +1,9 @@
-div {
-  display: flex;
-  justify-content: center;
-  margin-top: 10rem;
-}
-
-button {
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: rgb(245, 245, 17);
-  border-color: blue;
-  border-radius: 5px;
-  color: blue;
-  font-size: 11px;
+.BtnSearch {
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: rgb(245, 245, 17);
+	border-color: blue;
+	border-radius: 5px;
+	color: blue;
+	font-size: 11px;
 }
