@@ -3,9 +3,9 @@ import "./Header.css";
 import logo from "./pokemon.png";
 import Nav from "../Nav/Nav";
 import SearchBar from "../SearchBar/SearchBar";
-import BtnDarkMode from "../BtnDarkMode/BtnDarkMode";
+// import BtnDarkMode from "../BtnDarkMode/BtnDarkMode";
 
-const Header = () => {
+const Header = (props) => {
   const [icon, setIcon] = useState(false);
 
   return (
@@ -14,9 +14,11 @@ const Header = () => {
         <div className="img-wrapper">
           <img src={logo} alt="Pokemon-Logo" />
         </div>
-        <Nav />
-        <SearchBar />
-        {/* <BtnDarkMode /> */}
+        <div className="nav-wrapper">
+          <Nav />
+          <SearchBar data={props.data} search={props.search} />
+          {/* <BtnDarkMode /> */}
+        </div>
       </header>
     </>
   );
