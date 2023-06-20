@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 2rem;
   padding: 2rem;
 }
 
@@ -17,6 +18,10 @@
 
 .details-card h2 {
   font-size: 3rem;
+}
+
+.details-card h3 {
+  font-size: 2rem;
 }
 
 .details-card h2::first-letter {
