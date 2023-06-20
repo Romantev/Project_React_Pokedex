@@ -1,10 +1,10 @@
 import "./BtnSearch.css";
 
-const BtnSearch = () => {
+const BtnSearch = ({setOpen}) => {
   return (
     <>
     {/* onClick function mit onClick={functionName} die function bekommst du über die props vom eltern element */}
-      <button className="BtnSearch">SEARCH</button>
+      <button onClick={() => setOpen(false)} className="BtnSearch">SEARCH</button>
     </>
   );
 };

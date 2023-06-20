@@ -23,13 +23,13 @@ const NavMenu = ({open, setFilterType, setOpen}) => {
         <section className="navMenu">
             <div className="imgBox">
                 <img src={logo} alt="Pokemon-Logo" />
-                <img onClick={() => setOpen(false)} src={close} alt="close" />
+                <img onClick={() => setOpen(false)&setFilterType([])} src={close} alt="close" />
             </div>
             <h1>Type</h1>
              <div className="checkBoxBox">
             {allTypes?.map((item, i) => <CheckBox text={item.name}  setFilterType={setFilterType} key={i}/>)}
             </div> 
-            <BtnSearch /> 
+            <BtnSearch setOpen={setOpen}/> 
         </section>
     </>
     
