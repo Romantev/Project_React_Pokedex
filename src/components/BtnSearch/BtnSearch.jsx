@@ -1,7 +1,11 @@
 import "./BtnSearch.css";
 
 const BtnSearch = () => {
-  return <></>;
+  return (
+    <div>
+      <button onclick="search()">SEARCH</button>
+    </div>
+  );
 };
 
 export default BtnSearch;
