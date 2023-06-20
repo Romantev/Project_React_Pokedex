@@ -11,13 +11,11 @@ const DetailSite = () => {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/1`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${params.id}`)
       .then((res) => res.json())
       .then((data) => setPokemonData(data))
       .catch((error) => console.log("Fehlermeldung: ", error));
   }, []);
-
-  console.log(pokemonData);
 
   return (
     <>
