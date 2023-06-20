@@ -18,7 +18,7 @@ const Header = () => {
       </div>
       <Nav />
       <SearchBar />
-      <BtnDarkMode />
+      {/* <BtnDarkMode /> */}
     </header>  
   </>
 );
