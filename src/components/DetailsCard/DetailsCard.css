@@ -4,16 +4,21 @@
   justify-content: center;
   align-items: flex-start;
   gap: 2rem;
-  padding: 2rem;
 }
 
 .details-card img {
-  max-width: 100%;
+  margin-top: -9rem;
+  position: relative;
+  bottom: 10%;
+  z-index: 10;
+  height: 50vh;
 }
 
 .details-card-name {
   display: flex;
   gap: 1rem;
+  color: rgb(242, 255, 0);
+  stroke: 1rem;
 }
 
 .details-card h2 {
@@ -41,4 +46,22 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.img-box {
+  height: 100%;
+  position: relative;
+  width: 80vw;
+  border-radius: 20px;
+}
+
+.img-background {
+  height: 50%;
+  background: var(--second-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80vw;
+  border-radius: 20px;
 }

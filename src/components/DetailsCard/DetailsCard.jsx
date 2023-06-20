@@ -7,10 +7,13 @@ const DetailsCard = (props) => {
     <>
       {props.item ? (
         <main className="details-card">
-          <img
-            src={props.item.sprites.other.home.front_default}
-            alt={props.item.name}
-          />
+          <div className="img-box">
+            <img
+              src={props.item.sprites.other.home.front_default}
+              alt={props.item.name}
+            />
+            <div className="img-background"></div>
+          </div>
           <div className="details-card-name">
             <h2>
               {props.item.id < 10 ? "#00" : props.item.id < 100 ? "#0" : "#"}
